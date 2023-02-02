@@ -18,8 +18,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env.local react-scripts start",
+    "build:staging": "env-cmd -f .env.local react-scripts build",
+    "build:production": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,5 +44,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.2.4"
-  }
+  },
+  "proxy": "https://mp1.iprobonus.com"
 }
